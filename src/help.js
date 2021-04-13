@@ -1,6 +1,6 @@
 const help = (prefix) => {
 	return `
-「 *Shan Bot* 」
+「 *Keo's* 」
 
 Hola cómo estan queridos usuarios, hemos actualizado la base de datos del bot para poner nuevas funciones 😀
 
@@ -8,9 +8,7 @@ Disculpas por los inconvenientes 😞
 
 ◪ *Información*
   ❏ Comando: 「  ${prefix}  」
-  ❏ Creador: Shanduy
-  ❏ Como instalar el bot: https://youtu.be/rfxuYsWGmQo
-  ❏ Instagram: https://www.instagram.com/thepavos
+  ❏ Creador: Laisy
 
 ◪ *Para Usar Al Bot*
   ❏ Registrate con el comando ${prefix}daftar Nombre
@@ -89,13 +87,6 @@ Para usar estas funciones el bot necesita admin
   └─ ❏ ${prefix}nsfwmenu
 
 Para activar los NSFW coloque el siguiente comando ${prefix}nsfw 1 y para desactivar los NSFW coloque ${prefix}nsfw 0
-
-No te olvides de seguirme en instagram flaco :)
-
-Para saber la ultima version mas actual del bot entra en 
-https://github.com/shanduy/ShanBot
-
-by Shanduy
 `
 }
 
