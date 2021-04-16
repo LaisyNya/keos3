@@ -33,11 +33,6 @@ Disculpas por los inconvenientes 😞
   ├─ ❏ ${prefix}tomp3
   └─ De video a MP3
 
-◪ *DESCARGAS*
-  │
-  ├─ ❏ ${prefix}ytmp4
-  └─ Mas link del video de YT
-
 ◪ *AUDIO*
   │
   ├─ ❏ ${prefix}play
@@ -56,10 +51,8 @@ Disculpas por los inconvenientes 😞
 ◪ *OTROS*
   │
   ├─ ❏ ${prefix}wame
-  ├─ Link de Whatsapp
-  ├─ ❏ ${prefix}virtex (Hernqn)
-  ├─ ❏ ${prefix}exe
-  └─ ❏ ${prefix}qrcode
+  └─ Link de Whatsapp
+ 
   
 ◪ *GRUPOS*
   │
@@ -75,8 +68,6 @@ Disculpas por los inconvenientes 😞
   ├─ Dar admin a un miembro
   ├─ ❏ ${prefix}demote
   ├─ Quitar el admin
-  ├─ ❏ ${prefix}linkgc
-  ├─ Link del grupo
   ├─ ❏ ${prefix}tagall
   └─ Nombra a todos los del grupo
 
