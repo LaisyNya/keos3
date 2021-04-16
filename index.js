@@ -566,7 +566,7 @@ async function starts() {
 					anu = await fetchJson(`https://arugaz.my.id/api/wikien?q=${tels}`, {method: 'get'})
 					reply(anu.result)
 					break				
-				/case 'ytmp//3':
+				case 'ytmp//3':
 					if (args.length < 1) return reply('Donde esta la URL?')
 					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
 					anu = await fetchJson(`https://mhankbarbar.tech/api/yta?url=${args[0]}&apiKey=${BarBarKey}`, {method: 'get'})
@@ -577,7 +577,7 @@ async function starts() {
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
 					break
-				/case 'ytmp//4':
+				case 'ytmp4':
 					if (args.length < 1) return reply('Donde esta la URL?')
 					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
 					anu = await fetchJson(`https://st4rz.herokuapp.com/api/ytv2?url=${args[0]}`, {method: 'get'})
@@ -1047,39 +1047,6 @@ async function starts() {
 		           if (stdout) {
 			       client.sendMessage(from, stdout, text, { quoted: mek })
 		           }
-	           })
-                  break
-                 /case 'link//group':
-				case 'link//grup':
-				case 'lin//kgc':
-				    client.updatePresence(from, Presence.composing) 
-				    if (!isGroup) return reply(mess.only.group)
-                                     if (!isUser) return reply(mess.only.daftarB)
-					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					linkgc = await client.groupInviteCode (from)
-					yeh = `https://chat.whatsapp.com/${linkgc}\n\nLink Group *${groupName}*`
-					client.sendMessage(from, yeh, text, {quoted: mek, detectLinks: false})
-					break
-                /case 'qrc//ode':
-                buff = await getBuffer(`https://api.qrserver.com/v1/create-qr-code/?data=${body.slice(8)}&size=1080%C3%971080`)
-				client.sendMessage(from, buff, image, {quoted: mek})
-				break
-				case 'ocr':
-					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
-						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-						const media = await client.downloadAndSaveMediaMessage(encmedia)
-						reply(mess.wait)
-						await recognize(media, {lang: 'eng+ind', oem: 1, psm: 3})
-							.then(teks => {
-								reply(teks.trim())
-								fs.unlinkSync(media)
-							})
-							.catch(err => {
-								reply(err.message)
-								fs.unlinkSync(media)
-							})
-					} else {
-						reply('Acto fotográfico')
 					}
 					break
 
